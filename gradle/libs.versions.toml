@@ -1,0 +1,31 @@
+[versions]
+kotlin = "2.3.0"
+shadow = "9.3.1"
+runhytale = "1.0.0"
+manifestfactory = "1.0.0"
+serialization = "1.10.0-RC"
+jda = "6.2.1"
+polaris = "1.0.0-SNAPSHOT"
+ktor = "3.3.3"
+coroutines = "1.10.2"
+
+[plugins]
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+runhytale = { id = "io.moonlightdevelopment.runhytale", version.ref = "runhytale" }
+manifestfactory = { id = "io.moonlightdevelopment.manifestfactory", version.ref = "manifestfactory" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+[libraries]
+jda = { module = "net.dv8tion:JDA", version.ref = "jda" }
+polaris = { module = "dev.triumphteam:polaris-hocon", version.ref = "polaris" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+
+[bundles]
+ktor = ["ktor-client-core", "ktor-client-cio", "ktor-client-serialization", "ktor-client-negotiation"]
