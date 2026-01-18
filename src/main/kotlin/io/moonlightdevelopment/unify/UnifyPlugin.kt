@@ -12,6 +12,7 @@ import io.moonlightdevelopment.unify.bridge.hytale.HytaleChatBridge
 import io.moonlightdevelopment.unify.jda.JDAManager
 import io.moonlightdevelopment.unify.listeners.PlayerChatHandler
 import io.moonlightdevelopment.unify.listeners.PlayerDeathHandler
+import io.moonlightdevelopment.unify.listeners.PlayerParticipationHandler
 import io.moonlightdevelopment.unify.storage.UnifyConfig
 
 class UnifyPlugin(val init: JavaPluginInit) : JavaPlugin(init) {
@@ -43,6 +44,7 @@ class UnifyPlugin(val init: JavaPluginInit) : JavaPlugin(init) {
 
         PlayerDeathHandler(this, chatBridge)
         PlayerChatHandler(this, chatBridge)
+        PlayerParticipationHandler(this, chatBridge)
 
         logger.atInfo().log("Unify Plugin starting up.")
     }
