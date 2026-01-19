@@ -31,7 +31,9 @@ class PlayerDeathHandler(
         store: Store<EntityStore>,
         commandBuffer: CommandBuffer<EntityStore>
     ) {
-        val player = store.getComponent(ref, Player.getComponentType()) as Player
+        val player =
+            store.getComponent(ref, Player.getComponentType()) ?: // Not a player or component missing
+            return
 
         val ansi = component.deathMessage?.ansiMessage ?: return
 
