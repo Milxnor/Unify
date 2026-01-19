@@ -39,7 +39,7 @@ class PlayerDeathHandler(
 
         chatBridge.sendTo(
             BridgePayload(
-                author = player.displayName,
+                author = player.displayName + " (Server)",
                 raw = ansi,
                 origin = Origin.HYTALE
             ),
